@@ -4,48 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agrinho 2026</title>
-    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Agrinho 2026</h1>
-            <p>Educando para um futuro sustentável</p>
-        </div>
+<body style="font-family: Arial, sans-serif; line-height:1.6; margin:0; padding:0; background-color:#f4f4f4;">
+
+    <!-- Header -->
+    <header style="background-color:#4CAF50; color:white; padding:30px; text-align:center;">
+        <h1>Agrinho 2026</h1>
+        <p>Educando para um futuro sustentável</p>
+        <nav>
+            <a href="#sobre" style="color:white; margin:0 10px; text-decoration:none; font-weight:bold;">Sobre</a>|
+            <a href="#atividades" style="color:white; margin:0 10px; text-decoration:none; font-weight:bold;">Atividades</a>|
+            <a href="#contato" style="color:white; margin:0 10px; text-decoration:none; font-weight:bold;">Contato</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="intro">
-            <div class="container">
-                <h2>Sobre o Agrinho</h2>
-                <p>O Agrinho é um projeto que incentiva estudantes a refletirem sobre cidadania, meio ambiente e sustentabilidade. Em 2026, nosso foco é criar um futuro mais consciente e responsável para todos.</p>
-            </div>
-        </section>
+    <!-- Sobre -->
+    <section id="sobre" style="padding:40px; background-color:white; margin:20px;">
+        <h2 style="color:#4CAF50;">Sobre o Agrinho</h2>
+        <p>O Agrinho incentiva estudantes a refletirem sobre cidadania, meio ambiente e sustentabilidade. Em 2026, queremos construir um futuro mais consciente e responsável para todos.</p>
+    </section>
 
-        <section class="activities">
-            <div class="container">
-                <h2>Atividades</h2>
-                <ul>
-                    <li>Oficinas de educação ambiental</li>
-                    <li>Projetos de sustentabilidade escolar</li>
-                    <li>Concursos de redação e desenho sobre cidadania</li>
-                    <li>Campanhas de preservação ambiental</li>
-                </ul>
-            </div>
-        </section>
+    <!-- Atividades -->
+    <section id="atividades" style="padding:40px; background-color:white; margin:20px;">
+        <h2 style="color:#4CAF50;">Atividades</h2>
+        <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:left;">
+            <tr style="background-color:#e8f5e9;">
+                <th>Atividade</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>Oficinas Ambientais</td>
+                <td>Aprenda práticas sustentáveis com oficinas interativas para estudantes.</td>
+            </tr>
+            <tr>
+                <td>Projetos Escolares</td>
+                <td>Desenvolva projetos sobre sustentabilidade e cidadania em sua escola.</td>
+            </tr>
+            <tr>
+                <td>Concursos Criativos</td>
+                <td>Participe de concursos de redação e desenho sobre temas ambientais.</td>
+            </tr>
+        </table>
+    </section>
 
-        <section class="contact">
-            <div class="container">
-                <h2>Contato</h2>
-                <p>Quer saber mais? Entre em contato conosco pelo e-mail: <a href="mailto:contato@agrinho2026.org">contato@agrinho2026.org</a></p>
-            </div>
-        </section>
-    </main>
+    <!-- Contato -->
+    <section id="contato" style="padding:40px; background-color:white; margin:20px;">
+        <h2 style="color:#4CAF50;">Contato</h2>
+        <p>Entre em contato pelo e-mail: <a href="mailto:contato@agrinho2026.org">contato@agrinho2026.org</a></p>
+        <form>
+            <p><label>Nome:<br><input type="text" name="nome" style="width:100%; padding:8px;"></label></p>
+            <p><label>E-mail:<br><input type="email" name="email" style="width:100%; padding:8px;"></label></p>
+            <p><label>Mensagem:<br><textarea name="mensagem" rows="5" style="width:100%; padding:8px;"></textarea></label></p>
+            <p><input type="submit" value="Enviar" style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; cursor:pointer;"></p>
+        </form>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Agrinho. Todos os direitos reservados.</p>
-        </div>
+    <!-- Rodapé -->
+    <footer style="text-align:center; padding:20px; background-color:#333; color:white;">
+        <p>&copy; 2026 Agrinho. Todos os direitos reservados.</p>
+        <p>Redes sociais: <a href="#" style="color:#4CAF50; text-decoration:none;">Facebook</a> | 
+           <a href="#" style="color:#4CAF50; text-decoration:none;">Instagram</a> | 
+           <a href="#" style="color:#4CAF50; text-decoration:none;">Twitter</a>
+        </p>
     </footer>
+
 </body>
 </html>
