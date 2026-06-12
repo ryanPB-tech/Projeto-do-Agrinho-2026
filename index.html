@@ -3,158 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Agrinho 2026</title>
+    <title>Inovação Agrinho 2026</title>
     <style>
-        /* Estilos Básicos para o Design do Site */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Reset e Definições Gerais */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f9f4;
-            color: #333;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #0b0f19;
+            color: #e2e8f0;
             line-height: 1.6;
         }
 
-        header {
-            background-color: #2e7d32; /* Verde Agrinho */
-            color: white;
+        /* Hero Section (Apresentação Impactante) */
+        .hero {
+            background: linear-gradient(135deg, #0b0f19 50%, #1e3a1e 100%);
+            padding: 6rem 2rem 4rem 2rem;
             text-align: center;
-            padding: 2rem 1rem;
+            border-bottom: 1px solid #2e7d32;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.2rem;
-            font-weight: 300;
-        }
-
-        nav {
-            background-color: #1b5e20;
-            display: flex;
-            justify-content: center;
-            padding: 0.5rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
+        .badge {
+            background-color: #4caf50;
+            color: #0b0f19;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: bold;
-            border-radius: 4px;
-            transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        nav a:hover {
-            background-color: #a5d6a7;
-            color: #1b5e20;
+        .hero h1 {
+            font-size: 3rem;
+            margin: 1.5rem 0 1rem 0;
+            color: #ffffff;
+            font-weight: 800;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        .hero h1 span {
+            color: #4caf50;
         }
 
-        section {
-            background-color: white;
+        .hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Layout em Grade (Grid) para o Conteúdo */
+        .main-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .grid-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Estilo dos Blocos/Cards */
+        .block {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
             padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, border-color 0.3s;
         }
 
-        h2 {
-            color: #2e7d32;
-            border-bottom: 2px solid #a5d6a7;
-            padding-bottom: 0.5rem;
+        .block:hover {
+            transform: translateY(-5px);
+            border-color: #4caf50;
         }
 
-        .projeto-info {
+        .block h2 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
             display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .block h2::before {
+            content: "•";
+            color: #4caf50;
+            font-size: 2rem;
+        }
+
+        .block p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* Lista de Informações da Equipe */
+        .info-list {
+            list-style: none;
             margin-top: 1rem;
         }
 
-        .card {
-            flex: 1;
-            min-width: 250px;
-            background-color: #f1f8e9;
-            padding: 1.5rem;
-            border-radius: 6px;
-            border-left: 5px solid #2e7d32;
+        .info-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #1f2937;
+            color: #94a3b8;
         }
 
+        .info-list li strong {
+            color: #e2e8f0;
+        }
+
+        /* Rodapé Tecnológico */
         footer {
-            background-color: #2e7d32;
-            color: white;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 4rem;
-            font-size: 0.9rem;
+            padding: 2.5rem 1rem;
+            background-color: #070a10;
+            border-top: 1px solid #1f2937;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Agrinho 2026</h1>
-        <p>Inovação, Sustentabilidade e o Futuro do Campo</p>
+    <header class="hero">
+        <span class="badge">Agrinho 2026</span>
+        <h1>Tecnologia que <span>Alimenta</span></h1>
+        <p>Explorando soluções digitais e práticas sustentáveis para conectar o conhecimento escolar ao futuro do campo.</p>
     </header>
 
-    <nav>
-        <a href="#sobre">Sobre o Projeto</a>
-        <a href="#objetivos">Objetivos</a>
-        <a href="#equipe">Equipe</a>
-    </nav>
+    <main class="main-content">
+        <div class="grid-sections">
+            
+            <section class="block">
+                <h2>A Proposta</h2>
+                <p>Nosso projeto nasce da necessidade de alinhar a produção agrícola com a preservação ambiental. Através da pesquisa acadêmica, buscamos métodos que otimizem o uso de recursos e reduzam o impacto ecológico na nossa região.</p>
+            </section>
 
-    <div class="container">
+            <section class="block">
+                <h2>O Desafio</h2>
+                <p>Como garantir a segurança alimentar e o suporte ao produtor rural utilizando a tecnologia a nosso favor? Focamos na investigação de ferramentas acessíveis que transformam o manejo diário da terra.</p>
+            </section>
 
-        <section id="sobre">
-            <h2>Sobre o Nosso Projeto</h2>
-            <p>Bem-vindo ao site do nosso projeto para o <strong>Programa Agrinho 2026</strong>. Este espaço foi criado para apresentar nossas ideias, pesquisas e soluções voltadas ao desenvolvimento sustentável e à educação no meio rural.</p>
-            <p>O Agrinho incentiva a criatividade e o compromisso social, conectando a escola com a realidade do campo e as novas tecnologias agrícolas.</p>
-        </section>
+            <section class="block">
+                <h2>Ficha Técnica</h2>
+                <ul class="info-list">
+                    <li><strong>Instituição:</strong> Nome da Escola / Colégio</li>
+                    <li><strong>Alunos:</strong> Integrantes do Grupo</li>
+                    <li><strong>Orientador:</strong> Professor(a) Responsável</li>
+                    <li><strong>Localidade:</strong> Sua Cidade / Estado</li>
+                </ul>
+            </section>
 
-        <section id="objetivos">
-            <h2>Nossos Objetivos</h2>
-            <div class="projeto-info">
-                <div class="card">
-                    <h3>Sustentabilidade</h3>
-                    <p>Promover práticas agrícolas que respeitem o meio ambiente e preservem os recursos naturais para as próximas gerações.</p>
-                </div>
-                <div class="card">
-                    <h3>Tecnologia no Campo</h3>
-                    <p>Explorar como ferramentas digitais e automação podem ajudar o pequeno e o grande produtor rural.</p>
-                </div>
-                <div class="card">
-                    <h3>Educação</h3>
-                    <p>Disseminar o conhecimento sobre a importância do agronegócio consciente dentro e fora da sala de aula.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="equipe">
-            <h2>Quem Somos</h2>
-            <p>Somos estudantes e orientadores dedicados a transformar a realidade através da pesquisa acadêmica e prática.</p>
-            <ul>
-                <li><strong>Estudante(s):</strong> Seu Nome / Nomes da Equipe</li>
-                <li><strong>Professor(a) Orientador(a):</strong> Nome do Professor</li>
-                <li><strong>Escola:</strong> Nome da Sua Escola</li>
-                <li><strong>Cidade:</strong> Sua Cidade - Estado</li>
-            </ul>
-        </section>
-
-    </div>
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Projeto Agrinho. Desenvolvido para a plataforma GitHub Pages.</p>
+        <p>Projeto desenvolvido para o concurso Agrinho 2026.</p>
+        <p>Hospedado via <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
     </footer>
 
 </body>
